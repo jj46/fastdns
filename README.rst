@@ -14,9 +14,13 @@ Note: If you are looking to simply determine if a host is resolvable or don't ca
 
 Installation
 ------------
+
+    .. code-block::
+
     git clone https://github.com/jj46/fastdns.git
     cd fastdns
     python3 -m pip install -e .
+
 
 Usage
 -----
