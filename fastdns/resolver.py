@@ -4,11 +4,11 @@ resolver.py - A fast multi-threaded DNS resolver using the dnspython library
 
 Examples:
     # Importing the library
-    # from fastdns import fastdns
+    # from fastdns import resolver
 
     # Resolving many DNS hosts
     # >>> from pprint import pprint
-    # >>> r = fastdns.Resolver(domain='cisco.com')
+    # >>> r = resolver.Resolver(domain='cisco.com')
     # >>> r.hostnames = {'www', 'wwwin', 'ds', 'release'}
     # >>> cache = r.resolve()
     # >>> pprint(cache)
@@ -23,7 +23,7 @@ Examples:
 
     # Resolving mixed hostnames and IPs (v4 and v6)
     # >>> hostnames = {'www', '2001:420:210d::a', '8.8.8.8', 'www.purple.com'}
-    # >>> cache = fastdns.Resolver(hostnames=hostnames, domain='cisco.com').resolve()
+    # >>> cache = resolver.Resolver(hostnames=hostnames, domain='cisco.com').resolve()
     # >>> pprint(cache)
     # {'dns-rtp': {'2001:420:210d::a'},
     #  'google-public-dns-a.google.com': {'8.8.8.8'},
@@ -31,11 +31,11 @@ Examples:
     #  'www.purple.com': {'153.104.63.227'}}
 
     # Performing a single DNS lookup
-    # >>> fastdns.dns_lookup('wwwin')
+    # >>> resolver.dns_lookup('wwwin')
     # ['173.37.111.50']
 
     # Performing a single reverse lookup
-    # >>> fastdns.reverse_lookup('8.8.8.8')
+    # >>> resolver.reverse_lookup('8.8.8.8')
     # 'google-public-dns-a.google.com'
 """
 from queue import Queue
