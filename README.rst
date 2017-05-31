@@ -1,25 +1,25 @@
 =======
 fastdns
 =======
-
-
-A library for performing many DNS queries very quickly
-
+The purpose of this library is to use multiple DNS queries to multiple DNS servers to cache as many IPs as possible for DNS hosts that return lots of IP addresses (cloud hosted).
 
 * Free software: MIT license
 
 Features
 --------
-
-The purpose of this library is to use multiple DNS queries to multiple DNS servers to cache as many IPs as possible for DNS hosts that return lots of IP addresses (cloud hosted).
-
-If you are looking to simply determine if a host is resolvable or don't care as much about hosts with tons of IPs, the berserker resolver may suit your needs better -> https://github.com/DmitryFillo/berserker_resolver
-
 * DNS Resolver library for performing many DNS queries
 * DNS Caching library for caching hosts with many IPs
 
+Note: If you are looking to simply determine if a host is resolvable or don't care as much about hosts with tons of IPs, the berserker resolver may suit your needs better -> https://github.com/DmitryFillo/berserker_resolver
+
+Installation
+------------
+    git clone https://github.com/jj46/fastdns.git
+    cd fastdns
+    python3 -m pip install -e .
+
 Usage
---------
+-----
     >>> from fastdns import resolver
     >>> from pprint import pprint
     >>> r = resolver.Resolver(
