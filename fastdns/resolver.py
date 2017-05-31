@@ -253,12 +253,13 @@ class Resolver:
                     self.cache[host] = set()
                 elif self.cache[host] is None:
                     self.cache[host] = set()
+
                 for ip in ips:
                     if ip is not None:
                         self.cache[host].add(ip)
             else:
                 if host not in self.cache:
-                    self.cache[host] = None
+                    self.cache[host] = set()
         finally:
             lock.release()
 

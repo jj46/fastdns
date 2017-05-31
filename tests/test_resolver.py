@@ -8,9 +8,7 @@ test_fastdns
 Tests for `fastdns` module.
 """
 
-import pytest
-from contextlib import contextmanager
-from fastdns import fastdns
+from fastdns import resolver
 import logging
 import sys
 
@@ -25,17 +23,17 @@ logging.basicConfig(
 def test_get_public_dns_servers():
     """Simple test of the public DNS server grabber
     """
-    dns_servers = fastdns.get_public_dns_servers(countries=['us'])
+    dns_servers = resolver.get_public_dns_servers(countries=['us'])
     assert len(dns_servers) >= 100
 
 
-def test_dns_resolver():
+def test_resolver():
     """Simple test of the DNS resolver
     """
     hosts = ['www', 'mail', 'maps']
     dns_servers = ['8.8.8.8', '4.2.2.2']
 
-    r = fastdns.Resolver(
+    r = resolver.Resolver(
         hostnames=hosts,
         domain='google.com',
         nameservers=dns_servers,
