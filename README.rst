@@ -22,16 +22,13 @@ Usage
 --------
     >>> from fastdns import resolver
     >>> from pprint import pprint
-
     >>> r = resolver.Resolver(
         hostnames=['www', 'mail', 'maps'],
         domain='google.com',
         nameservers=['8.8.8.8', '4.2.2.2'],
         tries=1
         )
-
     >>> pprint(r.resolve())
-
     'mail': {'172.217.8.5', '216.58.217.69', '172.217.7.229', '172.217.5.229'},
     'maps': {'172.217.11.46',
              '172.217.5.238',
