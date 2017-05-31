@@ -10,12 +10,13 @@ with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
 requirements = [
-    'Click>=6.0',
-    # TODO: put package requirements here
+    'dnspython>=1.15.0',
+    'pytest>=2.9.2',
+    'requests>=2.13.0'
 ]
 
 test_requirements = [
-    # TODO: put package test requirements here
+    'pytest>=3.0.7'
 ]
 
 setup(
