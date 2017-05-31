@@ -15,15 +15,16 @@ Note: If you are looking to simply determine if a host is resolvable or don't ca
 Installation
 ------------
 
-    .. code-block::
+::
 
     git clone https://github.com/jj46/fastdns.git
     cd fastdns
     python3 -m pip install -e .
 
-
 Usage
 -----
+::
+
     >>> from fastdns import resolver
     >>> from pprint import pprint
     >>> r = resolver.Resolver(
@@ -43,7 +44,7 @@ Usage
     'www': {'216.58.217.68', '216.58.217.132', '172.217.7.228', '172.217.7.196'}}
 
 Credits
----------
+-------
 
 This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
 
