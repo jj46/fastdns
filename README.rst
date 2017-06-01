@@ -42,6 +42,14 @@ Usage
              '216.58.217.174'},
     'www': {'216.58.217.68', '216.58.217.132', '172.217.7.228', '172.217.7.196'}}
 
+There is also a function for pulling down public DNS servers from https://public-dns.info/
+
+::
+
+
+
+
+
 Credits
 -------
 
