@@ -179,7 +179,7 @@ def dns_lookup(hostname, server=None, timeout=3, domain=None):
     try:
         answers = r.query(hostname, 'A')
     except:
-        logging.error(traceback.format_exc())
+        logging.error('DNS timeout looking up {0} using server {1}'.format(hostname, server))
         return None
 
     ips = set(a.to_text() for a in answers)
