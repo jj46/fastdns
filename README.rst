@@ -8,7 +8,6 @@ The purpose of this library is to use multiple DNS queries to multiple DNS serve
 Features
 --------
 * DNS Resolver library for performing many DNS queries
-* DNS Caching library for caching hosts with many IPs
 
 Note: If you are looking to simply determine if a host is resolvable or don't care as much about hosts with tons of IPs, the berserker resolver may suit your needs better -> https://github.com/DmitryFillo/berserker_resolver
 
